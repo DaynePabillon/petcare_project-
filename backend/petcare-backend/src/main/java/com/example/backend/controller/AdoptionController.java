@@ -17,7 +17,6 @@ import com.example.backend.service.AdoptionService;
 
 @RestController
 @RequestMapping("/api/adoptions")
-@CrossOrigin(origins = "*")
 public class AdoptionController {
 
     @Autowired

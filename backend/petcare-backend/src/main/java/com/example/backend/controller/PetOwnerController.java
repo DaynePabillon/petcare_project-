@@ -23,7 +23,6 @@ import com.example.backend.service.PetOwnerService;
 
 @RestController
 @RequestMapping("/api/petowners")
-@CrossOrigin(origins = "*")
 public class PetOwnerController {
 
     @Autowired
@@ -99,7 +98,5 @@ public class PetOwnerController {
         }
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
     }
-
-    
 
 }

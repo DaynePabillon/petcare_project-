@@ -18,7 +18,6 @@ import com.example.backend.service.PetService;
 
 @RestController
 @RequestMapping("/api/pets")
-@CrossOrigin(origins = "*")
 public class PetController {
 
     private final PetService service;
@@ -48,8 +47,6 @@ public class PetController {
     public List<Pet> getByOwner(@PathVariable Long id) {
         return service.getByOwnerId(id);
     }
-
-    
 
     @PutMapping("/{id}")
     public Pet update(@PathVariable Long id, @RequestBody Pet pet) {

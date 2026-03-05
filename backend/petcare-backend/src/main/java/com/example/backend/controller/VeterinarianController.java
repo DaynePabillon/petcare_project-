@@ -17,7 +17,6 @@ import com.example.backend.service.VeterinarianService;
 
 @RestController
 @RequestMapping("/api/veterinarians")
-@CrossOrigin(origins = "*")
 public class VeterinarianController {
 
     @Autowired

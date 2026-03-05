@@ -17,12 +17,11 @@ import com.example.backend.service.VeterinarianService;
 
 @RestController
 @RequestMapping("/api/veterinarians")
-@CrossOrigin(origins = "http://localhost:5173") // Adjust to your frontend port
+@CrossOrigin(origins = "*")
 public class VeterinarianController {
 
     @Autowired
     private VeterinarianService veterinarianService;
-
 
     @GetMapping("/email/{email}")
     public Optional<Veterinarian> getByEmail(@PathVariable String email) {
@@ -49,7 +48,6 @@ public class VeterinarianController {
         return veterinarianService.getAllVeterinarians();
     }
 
-
     @PostMapping("/login")
     public Optional<Veterinarian> login(@RequestBody Veterinarian loginData) {
         Optional<Veterinarian> vet = veterinarianService.getByEmail(loginData.getEmail());
@@ -58,9 +56,7 @@ public class VeterinarianController {
             return vet;
         }
 
-        return Optional.empty(); 
-}
+        return Optional.empty();
+    }
 
-
-    
 }

@@ -12,7 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import './AppointmentForm.css'; // Reuse your styles
-import axiosInstance from './axiosInstance';
+import axiosInstance from '../api/axiosInstance';
 
 const EditPet = ({ pet, onClose, onSuccess }) => {
   const [formData, setFormData] = useState({

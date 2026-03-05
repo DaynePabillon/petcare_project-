@@ -10,7 +10,7 @@ import {
   InputLabel,
   Button
 } from '@mui/material';
-import axiosInstance from './axiosInstance';
+import axiosInstance from '../api/axiosInstance';
 
 const VetAppointmentList = () => {
   const [appointments, setAppointments] = useState([]);

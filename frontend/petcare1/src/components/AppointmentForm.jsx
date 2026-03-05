@@ -4,7 +4,7 @@ import {
   Box, Button, Grid, InputLabel, MenuItem,
   Select, TextField, Typography, Paper
 } from '@mui/material';
-import axiosInstance from './axiosInstance';
+import axiosInstance from '../api/axiosInstance';
 import './AppointmentForm.css';
 
 

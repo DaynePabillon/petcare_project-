@@ -1,12 +1,11 @@
 services:
-  # ── Backend (Spring Boot) ──────────────────────────────────────────────────
+  # ── Backend (Spring Boot via Docker) ──────────────────────────────────────
   - type: web
     name: petcare-backend
-    runtime: java
+    runtime: docker
     plan: free
     rootDir: backend/petcare-backend
-    buildCommand: ./mvnw clean package -DskipTests
-    startCommand: java -jar target/backend-0.0.1-SNAPSHOT.jar
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DATABASE_URL
         value: jdbc:postgresql://ep-falling-violet-aisscdsu-pooler.c-4.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
